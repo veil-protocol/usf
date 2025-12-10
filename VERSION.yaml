@@ -1,0 +1,46 @@
+# USF Version Definition
+# This file is the single source of truth for version information
+
+version:
+  major: 4
+  minor: 1
+  patch: 1
+  full: "4.1.1"
+  codename: "SKYNET-HARDENED"
+
+release:
+  date: "2025-12-10"
+  status: "production"  # specification | alpha | beta | production
+
+lineage:
+  predecessor: "USF 4.1.0 (SKYNET)"
+  evolution_type: "hardening"
+  key_changes:
+    - "11-agent MAL coordination (5-phase model)"
+    - "Behavioral mode conflict resolution"
+    - "Think command user feedback"
+    - "Chain dependency management"
+    - "Pattern provenance tracking"
+    - "Consensus failure recovery"
+    - "Knowledge store specification"
+
+  sources_integrated:
+    - "Anthropics Official"
+    - "SuperClaude_Framework"
+    - "VoltAgent/awesome-claude-code-subagents"
+    - "BeehiveInnovations/pal-mcp-server"
+    - "VoltAgent/ai-agent-platform"
+    - "VoltAgent/awesome-claude-skills"
+    - "hesreallyhim/awesome-claude-code"
+    - "Anthropic Best Practices"
+
+  patterns_integrated: 47
+  red_team_cycles: 5
+  total_improvements: 20
+
+compatibility:
+  minimum_version: "4.0.0"
+  recommended_version: "4.1.1"
+
+# Reference this file in all specifications:
+# > **Version**: See VERSION.yaml
