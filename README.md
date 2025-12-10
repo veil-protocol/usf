@@ -1,239 +1,200 @@
-# USF: Unified Superintelligence Framework
+<p align="center">
+  <img src="https://img.shields.io/badge/v4.1.1-SKYNET--HARDENED-0a0a0a?style=flat-square&labelColor=1a1a2e" alt="version"/>
+  <img src="https://img.shields.io/badge/status-production-10b981?style=flat-square" alt="status"/>
+  <img src="https://img.shields.io/badge/license-MIT-6366f1?style=flat-square" alt="license"/>
+</p>
 
-<div align="center">
+<h1 align="center">
+  <br>
+  <code>U S F</code>
+  <br>
+</h1>
 
-```
-██╗   ██╗███████╗███████╗    ██╗  ██╗   ██╗ ██╗
-██║   ██║██╔════╝██╔════╝    ██║  ██║  ███║███║
-██║   ██║███████╗█████╗      ███████║  ╚██║╚██║
-██║   ██║╚════██║██╔══╝      ╚════██║   ██║ ██║
-╚██████╔╝███████║██║              ██║██╗██║ ██║
- ╚═════╝ ╚══════╝╚═╝              ╚═╝╚═╝╚═╝ ╚═╝
-```
+<p align="center">
+  <strong>Unified Superintelligence Framework</strong><br>
+  <sub>Recursive self-improvement for AI reasoning systems</sub>
+</p>
 
-**A Self-Evolving Meta-Framework for Universal Domain Analysis**
-
-[![Version](https://img.shields.io/badge/version-4.1.1-blue.svg)](VERSION.yaml)
-[![Status](https://img.shields.io/badge/status-production--ready-green.svg)](#)
-[![License](https://img.shields.io/badge/license-MIT-purple.svg)](LICENSE)
-
-</div>
-
----
-
-## What is USF?
-
-**USF 4.1.1** is a methodology framework that enables AI systems to perform rigorous, multi-perspective analysis across any domain. It combines:
-
-- **Self-Evolution**: The framework improves itself through recursive self-analysis
-- **Universal Adaptation**: Automatically adapts to any domain without manual configuration
-- **Calibrated Precision**: 5 levels of analytical rigor matched to task requirements
-- **Multi-Chain Verification**: Independent verification chains prevent single-point-of-failure reasoning
-
-### Key Innovation
-
-USF is built on three revolutionary capabilities:
-
-1. **Recursive Self-Improvement**: USF uses itself to analyze and improve its own methodology
-2. **Infinite Modularity**: Automatically adapts to any domain without manual configuration
-3. **Calibrated Precision**: Achieves exactly the right level of rigor for any task
+<p align="center">
+  <a href="#quick-start">Quick Start</a> •
+  <a href="MASTER-SPECIFICATION.md">Specification</a> •
+  <a href="#architecture">Architecture</a> •
+  <a href="core/PRECISION-LEVELS.md">Precision Levels</a>
+</p>
 
 ---
+
+USF is a methodology framework that improves itself. It coordinates multiple analytical perspectives, calibrates reasoning depth to task requirements, and uses its own methodology to identify and fix its weaknesses.
+
+The framework emerged from 5 iterative red-team cycles where USF analyzed USF—each cycle surfaced issues that were resolved before the next. What remains is a production-hardened system for structured reasoning.
 
 ## Quick Start
 
-### Understanding Precision Levels
+USF operates through four engines that run in sequence:
 
-| Level | Name | Confidence | Use Case |
-|-------|------|------------|----------|
-| PL1 | Exploratory | 80-85% | Quick analysis, brainstorming |
-| PL2 | Operational | 85-92% | Standard professional work |
-| PL3 | Formal | 92-97% | High-stakes decisions |
-| PL4 | Rigorous | 97-99% | Critical systems, security |
-| PL5 | Exhaustive | 99-100% | Cryptographic, safety-critical |
-
-### Think Command Mapping
-
-```yaml
-think:        PL1-PL2  # Quick analysis
-think_hard:   PL2-PL3  # Detailed analysis
-think_harder: PL3-PL4  # Formal reasoning
-ultrathink:   PL4-PL5  # Maximum rigor
-thinkdeep:    PL3 ext  # Extended edge-case analysis
+```
+Input → Domain Detection → Expert Generation → Precision Selection → Verification → Output
 ```
 
----
+**Precision levels** determine analytical depth:
+
+| Level | Confidence | When to Use |
+|:------|:-----------|:------------|
+| PL1 | 80-85% | Exploration, brainstorming |
+| PL2 | 85-92% | Standard analysis |
+| PL3 | 92-97% | High-stakes decisions |
+| PL4 | 97-99% | Security, critical systems |
+| PL5 | 99%+ | Cryptographic, safety-critical |
+
+Map these to reasoning commands:
+
+```
+think        → PL1-PL2
+think_hard   → PL2-PL3
+think_harder → PL3-PL4
+ultrathink   → PL4-PL5
+```
 
 ## Architecture
 
-USF 4.1.1 consists of four integrated engines:
+```
+                              ┌─────────────────────────────────────┐
+                              │          ORACLE-META                │
+                              │    11 agents monitor + improve      │
+                              │         the framework               │
+                              └──────────────┬──────────────────────┘
+                                             │
+                    ┌────────────────────────┼────────────────────────┐
+                    │                        │                        │
+                    ▼                        ▼                        ▼
+        ┌───────────────────┐    ┌───────────────────┐    ┌───────────────────┐
+        │  DOMAIN ADAPTER   │    │ PRECISION ENGINE  │    │   VERIFICATION    │
+        │                   │    │                   │    │                   │
+        │  Detects domain   │    │  Selects depth    │    │  8 independent    │
+        │  Generates expert │───▶│  Maps to PL1-5    │───▶│  chains validate  │
+        │  perspectives     │    │  Calibrates rigor │    │  conclusions      │
+        └───────────────────┘    └───────────────────┘    └───────────────────┘
+```
+
+**Oracle-Meta** is the self-evolution layer. It runs 11 specialized agents:
+
+| Agent | Function |
+|:------|:---------|
+| MAL-COVERAGE | Detects blind spots in domain analysis |
+| MAL-QUALITY | Assesses output against precision targets |
+| MAL-EFFICIENCY | Optimizes resource usage |
+| MAL-ADVERSARIAL | Red-teams conclusions |
+| MAL-CONVERGENCE | Monitors consensus formation |
+| MAL-CONTEXT | Manages context window budget |
+| MAL-ERROR | Coordinates failure recovery |
+| MAL-KNOWLEDGE | Preserves cross-session learning |
+| MAL-TASK | Parallelizes independent operations |
+| MAL-WORKFLOW | Orchestrates multi-phase analysis |
+| MAL-NOVELTY | Tracks novel patterns for integration |
+
+These agents operate in a 5-phase cycle: Monitor → Analyze → Propose → Validate → Integrate.
+
+## Verification
+
+Conclusions pass through 8 verification chains before finalization. Chains have weighted independence—if Chain F depends on Chain B's output, its agreement counts for 0.5× instead of 1.0×:
 
 ```
-┌──────────────────────────────────────────────────────────────────────────┐
-│                     ENGINE 1: ORACLE-META (Self-Evolution)               │
-│   11 MAL Agents monitor, analyze, and improve the framework             │
-├──────────────────────────────────────────────────────────────────────────┤
-│                     ENGINE 2: DOMAIN ADAPTATION                          │
-│   Automatic domain detection → Expert generation → Template selection   │
-├──────────────────────────────────────────────────────────────────────────┤
-│                     ENGINE 3: PRECISION CALIBRATION                      │
-│   5 precision levels with automatic selection and think-command mapping │
-├──────────────────────────────────────────────────────────────────────────┤
-│                     ENGINE 4: VERIFICATION                               │
-│   8 independent verification chains with dependency-aware agreement     │
-└──────────────────────────────────────────────────────────────────────────┘
+Chain A  Static Analysis     ████████████  1.0×
+Chain B  Dynamic Testing     ████████████  1.0×
+Chain C  Formal Methods      ████████████  1.0×
+Chain D  Empirical Testing   ████████████  1.0×
+Chain E  Expert Review       ████████████  1.0×
+Chain F  TDD (depends: B)    ██████        0.5×
+Chain G  Code Review         ████████████  1.0×
+Chain H  Debug (depends: BF) ████          0.3×
 ```
 
-### Meta-Analysis Layer (11 Agents)
+Effective agreement = `Σ(independent × 1.0) + Σ(dependent × weight)`
 
-| Agent | Purpose |
-|-------|---------|
-| MAL-COVERAGE | Domain completeness analysis |
-| MAL-QUALITY | Output quality assessment |
-| MAL-EFFICIENCY | Resource optimization |
-| MAL-NOVELTY | Innovation tracking |
-| MAL-CONVERGENCE | Process health monitoring |
-| MAL-ADVERSARIAL | Challenge effectiveness |
-| MAL-CONTEXT | Context window optimization |
-| MAL-ERROR | Error handling coordination |
-| MAL-KNOWLEDGE | Cross-session learning |
-| MAL-TASK | Parallel execution optimization |
-| MAL-WORKFLOW | Workflow orchestration |
+## Expert Archetypes
 
----
+Every analysis synthesizes 5 perspectives:
 
-## Specification Files
+| Archetype | Role | Challenge Mode |
+|:----------|:-----|:---------------|
+| **TH** (Theorist) | Conceptual frameworks, first principles | "What assumptions are we making?" |
+| **AD** (Adversarial) | Attack surface, failure modes | "How does this break?" |
+| **IM** (Implementer) | Practical constraints, execution | "Can we actually build this?" |
+| **QA** (Quality) | Edge cases, regression risks | "What did we miss?" |
+| **ST** (Strategist) | Long-term implications, tradeoffs | "What are we optimizing for?" |
 
-### Core Specifications
+Convergence requires 4/5 archetype agreement at the target precision level.
 
-| File | Description |
-|------|-------------|
-| [MASTER-SPECIFICATION.md](MASTER-SPECIFICATION.md) | Complete framework overview |
-| [core/PRECISION-LEVELS.md](core/PRECISION-LEVELS.md) | 5-level precision system |
-| [core/EXPERT-ARCHETYPES.md](core/EXPERT-ARCHETYPES.md) | 5 expert archetypes (TH, AD, IM, QA, ST) |
-| [core/DOMAIN-TAXONOMY.md](core/DOMAIN-TAXONOMY.md) | Universal domain classification |
-| [core/PHASE-TEMPLATES.md](core/PHASE-TEMPLATES.md) | Analysis phase templates |
+## Limitations
 
-### Self-Evolution
+USF is a reasoning methodology, not a knowledge base. It improves *how* analysis happens, not *what* is known.
 
-| File | Description |
-|------|-------------|
-| [self-evolution/META-ANALYSIS-AGENTS.md](self-evolution/META-ANALYSIS-AGENTS.md) | 11 MAL agent specifications |
-| [self-evolution/IMPROVEMENT-PROTOCOL.md](self-evolution/IMPROVEMENT-PROTOCOL.md) | Self-improvement process |
-| [self-evolution/BOOTSTRAP-PROTOCOL.md](self-evolution/BOOTSTRAP-PROTOCOL.md) | Framework initialization |
+Known constraints:
+- Self-improvement cycles show diminishing returns after ~5 iterations
+- PL5 (exhaustive) analysis is slow and rarely necessary
+- The framework assumes good-faith engagement—adversarial prompt injection is out of scope
+- Cross-session knowledge persistence requires external storage
 
-### Precision & Verification
+## Files
 
-| File | Description |
-|------|-------------|
-| [precision/VERIFICATION-CHAINS.md](precision/VERIFICATION-CHAINS.md) | 8 verification chains (A-H) |
-| [precision/UNCERTAINTY-QUANTIFICATION.md](precision/UNCERTAINTY-QUANTIFICATION.md) | Confidence calibration |
+| Path | Contents |
+|:-----|:---------|
+| [`MASTER-SPECIFICATION.md`](MASTER-SPECIFICATION.md) | Complete framework specification |
+| [`core/PRECISION-LEVELS.md`](core/PRECISION-LEVELS.md) | Precision level definitions and selection criteria |
+| [`core/EXPERT-ARCHETYPES.md`](core/EXPERT-ARCHETYPES.md) | Archetype behaviors and consensus rules |
+| [`self-evolution/META-ANALYSIS-AGENTS.md`](self-evolution/META-ANALYSIS-AGENTS.md) | MAL agent specifications |
+| [`precision/VERIFICATION-CHAINS.md`](precision/VERIFICATION-CHAINS.md) | Chain independence and weighting |
+| [`integration/EXECUTION-FLOW.md`](integration/EXECUTION-FLOW.md) | Behavioral modes and execution model |
 
-### Integration
+<details>
+<summary><strong>All specification files</strong></summary>
 
-| File | Description |
-|------|-------------|
-| [integration/EXECUTION-FLOW.md](integration/EXECUTION-FLOW.md) | 7 behavioral modes, execution model |
-| [integration/CONVERGENCE-CRITERIA.md](integration/CONVERGENCE-CRITERIA.md) | Multi-perspective consensus |
+**Core**
+- [`core/DOMAIN-TAXONOMY.md`](core/DOMAIN-TAXONOMY.md) — Domain classification system
+- [`core/PHASE-TEMPLATES.md`](core/PHASE-TEMPLATES.md) — Analysis phase templates
 
----
+**Self-Evolution**
+- [`self-evolution/IMPROVEMENT-PROTOCOL.md`](self-evolution/IMPROVEMENT-PROTOCOL.md) — Self-improvement process
+- [`self-evolution/BOOTSTRAP-PROTOCOL.md`](self-evolution/BOOTSTRAP-PROTOCOL.md) — Framework initialization
+- [`self-evolution/VERSION-LINEAGE.md`](self-evolution/VERSION-LINEAGE.md) — Version history and changes
 
-## Behavioral Modes
+**Precision**
+- [`precision/PRECISION-CALIBRATOR.md`](precision/PRECISION-CALIBRATOR.md) — Automatic level selection
+- [`precision/UNCERTAINTY-QUANTIFICATION.md`](precision/UNCERTAINTY-QUANTIFICATION.md) — Confidence calibration
 
-USF 4.1.1 supports 7 adaptive behavioral modes:
+**Integration**
+- [`integration/CONVERGENCE-CRITERIA.md`](integration/CONVERGENCE-CRITERIA.md) — Multi-perspective consensus
+- [`integration/EXAMPLE-ADAPTATIONS.md`](integration/EXAMPLE-ADAPTATIONS.md) — Domain adaptation examples
 
-| Mode | Purpose | Priority |
-|------|---------|----------|
-| `token_efficiency` | Context-aware concise output | 1 (highest) |
-| `deep_research` | Thorough autonomous investigation | 2 |
-| `task_management` | Systematic organization | 3 |
-| `orchestration` | Multi-tool coordination | 4 |
-| `business_panel` | Multi-expert strategic analysis | 5 |
-| `brainstorming` | Divergent creative exploration | 6 |
-| `introspection` | Meta-cognitive self-analysis | 7 (lowest) |
+**Domain Adaptation**
+- [`domain-adaptation/DOMAIN-DETECTOR.md`](domain-adaptation/DOMAIN-DETECTOR.md) — Automatic domain detection
+- [`domain-adaptation/EXPERT-GENERATOR.md`](domain-adaptation/EXPERT-GENERATOR.md) — Dynamic expert generation
+- [`domain-adaptation/CROSS-DOMAIN-TRANSFER.md`](domain-adaptation/CROSS-DOMAIN-TRANSFER.md) — Knowledge transfer patterns
 
----
-
-## Verification Chains
-
-8 verification chains with weighted independence:
-
-| Chain | Type | Independence | Weight |
-|-------|------|--------------|--------|
-| A | Static Analysis | Full | 1.0 |
-| B | Dynamic Testing | Full | 1.0 |
-| C | Formal Methods | Full | 1.0 |
-| D | Empirical Testing | Full | 1.0 |
-| E | Expert Review | Full | 1.0 |
-| F | TDD | Partial (B) | 0.5 |
-| G | Code Review | Full | 1.0 |
-| H | Debug Verification | Partial (B,F) | 0.3 |
-
-**Agreement Formula**: `effective = (independent × 1.0) + (dependent × weight)`
-
----
-
-## Version History
-
-| Version | Codename | Key Changes |
-|---------|----------|-------------|
-| 4.1.1 | SKYNET-HARDENED | Production ready, 11-agent coordination, parallel execution |
-| 4.1.0 | SKYNET | 47 community patterns, 5 new MAL agents, behavioral modes |
-| 4.0.3 | ORACLE-META | Self-evolution capability, glossary, error codes |
-| 4.0.0 | - | Four-engine architecture, 5 precision levels |
-
----
+</details>
 
 ## Development
 
-### Red Team Cycles
+USF 4.1.1 is the result of 5 self-analysis cycles:
 
-USF has undergone 5 self-improvement cycles:
+| Cycle | Findings | Resolution |
+|:------|:---------|:-----------|
+| 1 | 18 issues (2 critical) | Core architecture fixes |
+| 2 | 10 issues (0 critical) | Operational refinements |
+| 3 | 5 issues | Polish |
+| 4 | 14 issues (1 critical) | SKYNET integration analysis |
+| 5 | 2 issues (low severity) | Final hardening |
 
-| Cycle | Findings | Fixed | Status |
-|-------|----------|-------|--------|
-| 1 | 18 (2C, 5H) | 5 | Core fixes |
-| 2 | 10 (0C, 3H) | 4 | Operational |
-| 3 | 5 (0C, 0H) | 3 | Polish |
-| 4 | 14 (1C, 4H) | 0 | SKYNET analysis |
-| 5 | 2 (0C, 0H) | 8 | **Production ready** |
-
-**Total improvements**: 20 | **Final status**: 2 LOW findings (diminishing returns confirmed)
-
----
+Total: 20 improvements across 5 cycles. Remaining findings are low-severity edge cases with diminishing ROI to address.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-Key principles:
-1. All changes must pass USF self-analysis (MAL agents)
-2. Maintain backward compatibility with 4.x
-3. Document all patterns with provenance
-
----
+See [`CONTRIBUTING.md`](CONTRIBUTING.md). Changes are validated through USF's own MAL agents before merge.
 
 ## License
 
-MIT License - see [LICENSE](LICENSE)
+MIT. See [`LICENSE`](LICENSE).
 
 ---
 
-## Acknowledgments
-
-USF 4.1 integrates patterns from the Claude community ecosystem:
-- [Anthropic Official Resources](https://github.com/anthropics)
-- [SuperClaude Framework](https://github.com/NomenAK/SuperClaude_Framework)
-- [VoltAgent Subagents](https://github.com/VoltAgent/awesome-claude-code-subagents)
-- [PAL MCP Server](https://github.com/BeehiveInnovations/pal-mcp-server)
-- [Awesome Claude Code](https://github.com/hesreallyhim/awesome-claude-code)
-
-Combined source stars: 117,000+
-
----
-
-<div align="center">
-
-**USF 4.1.1** - *A methodology that improves itself*
-
-</div>
+<sub>USF integrates patterns from the Claude ecosystem: Anthropic, SuperClaude Framework, VoltAgent, BeehiveInnovations, and community contributors.</sub>
